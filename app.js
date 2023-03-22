@@ -16,14 +16,14 @@ async function getQuote() {
 
 getQuote();
 
-document.getElementById("new-quote-button").addEventListener("click", getQuote); 
+document.getElementById("new-quote-button").addEventListener("click", getQuote); //attach an event listener to the button on the page with id "new-quote-button" to call getQuote when the user clicks
 
 // Create a function that takes in a string, creates a new list item with that string, and then adds it to the ol with the id "quote-history"
 // Call the function within your "getQuote" function so that the quotes are stored in the "quote-history" list
 // Limit the function so that repeat quotes are ignored
 
 function addQuote(quote) { 
-    const historyList = document.createElement("ol");                   //create a new list item
+    const historyList = document.createElement("ol");                  //create a new list item
     historyList.innerText = quote;                                     //set the text of the list item to the quote
     document.getElementById("quote-history").appendChild(historyList); //add the list item to the ol with the id "quote-history"
     
